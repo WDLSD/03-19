@@ -11,9 +11,7 @@ while iter < maxit
         a1 = a0;
         b1 = alpha0r;
         if (b1 - a1) < epsilon
-%             alpha_star = a1 + tau*(b1 - a1);
-            % 达到精度时, [a1,b1]中任意一点均可, 一般取中点
-            alpha_star = (a1+b1)/2;
+            alpha_star = a1 + tau*(b1 - a1);
             break;
         else
             alpha1l = a1 + (1 - tau) * (b1 - a1);
@@ -25,9 +23,7 @@ while iter < maxit
         a1 = alpha0l;
         b1 = b0;
         if (b1 - a1) < epsilon
-%             alpha_star = a1 + tau*(b1 - a1);
-            % 达到精度时, [a1,b1]中任意一点均可, 一般取中点
-            alpha_star = (a1+b1)/2;
+            alpha_star = a1 + tau*(b1 - a1);
             break;
         else
             alpha1l = alpha0r;
